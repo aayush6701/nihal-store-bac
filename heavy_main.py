@@ -17,6 +17,7 @@ from typing import Optional
 from fastapi.requests import Request
 import traceback
 from fastapi import Query
+from pymongo import MongoClient
 
 
 # ------------------------------
@@ -36,7 +37,8 @@ app.add_middleware(
 # ------------------------------
 # MongoDB Connection
 # ------------------------------
-client = MongoClient("mongodb://localhost:27017/")  # change if Atlas
+MONGO_URI = "mongodb://admin:Aayush2004@localhost:27017/nihalstore?authSource=admin"  # change if Atlas
+client = MongoClient(MONGO_URI)
 db = client["nihalstore"]
 admin_collection = db["admins"]
 user_collection = db["users"] 
