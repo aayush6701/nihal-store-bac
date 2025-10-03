@@ -1,3 +1,7 @@
-pip install python-jose
-pip install email-validator
-pip install python-multipart
+python-multipart
+fastapi==0.115.0
+uvicorn[standard]==0.30.1
+pydantic==2.9.2
+pymongo==4.9.1
+python-jose==3.3.0
+email-validator==2.2.0
